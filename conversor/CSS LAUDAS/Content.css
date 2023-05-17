@@ -1,0 +1,317 @@
+:root {
+    --color-item: #9176c4e3;
+    --color-font: #000000;
+    --submenu-hover: translateX(-50%) rotateX(0);
+}
+
+.conversor {
+    width: 50%;
+    height: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    display: inline;
+    justify-content: center;
+    flex-direction: column;
+    
+
+    
+}
+
+
+label {
+    font-size: 1rem;
+    text-align: center;
+    font-family: 'Montserrat';
+    display: flex;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    line-height: normal;
+
+}
+
+input {
+    width: 200px;
+    text-align: center;
+    font-size: 1rem;
+    justify-content: center;
+    border-color: #c5a9f8;
+    background-color: #fbeeff;
+    font-family: 'Roboto';
+    margin-top: 5%;
+
+}
+
+input:focus {
+    border-color: #8552a0;
+    box-shadow: 0 0 0 0.05rem #26344a;
+    outline: none;
+
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.dados{
+    margin-top: auto;
+    margin-bottom: 3.5px;
+    font-family: 'Roboto';
+    font-weight: 300;
+    border: solid 2.5px;
+    width: 250px;
+    height: 22px;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: nowrap;
+    border-color: #c5a9f8;
+    background-color: #fbeeff;
+    display: inline-flex;
+    flex-direction:row;
+    align-items: center;
+    position: relative;
+
+}
+
+#laudas{
+    margin-top: auto;
+    margin-bottom: 3.5px;
+    font-family: 'Roboto';
+    font-weight: 300;
+    border: solid 2.5px;
+    width: 250px;
+    height: 22px;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: nowrap;
+    border-color: #c5a9f8;
+    background-color: #fbeeff;
+    display: inline-flex;
+    flex-direction:row;
+    align-items: center;
+    position: relative;
+
+}
+
+#convert {
+    width: 100px;
+    height: 40px;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 11%;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+    display: flex;
+    vertical-align: middle;
+    text-align: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 10px;
+    border-color: #8552a0;
+    box-shadow: 0 0 0 1px #220044c0;
+    background-color: #fbeeff;
+    position: relative;
+}
+
+#convert:hover {
+    cursor: pointer;
+    outline: none;
+    transition: 0.05s;
+    box-shadow: 0 0 0 1px #220044c0;
+
+}
+
+#convert:active {
+    background-color: #dacaf8;
+    transform: scale(0.98);
+    border-color: #3b0855;
+    box-shadow: 0 0 0 2px #130125bd;
+
+}
+
+/*OPÇÕES DE CÁLCULO*/
+
+.c-dropdown {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+._item {
+    color: var(--color-item);
+    margin: 0 10px;
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+
+}
+
+._item:hover ._submenu {
+    transform: translateX(-50%) rotateX(0);
+    opacity: 1;
+    transition-timing-function: ease-out;
+}
+
+._link {
+    color: var(--color-item);
+    text-decoration: none;
+    display: flex;
+
+}
+
+._link:hover {
+    text-decoration: underline;
+
+}
+
+._submenu {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-item);
+    border-radius: 5px;
+    list-style: none;
+    margin: 0;
+    width: 200px;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: calc(100% + -25px);
+    padding: 5px;
+    opacity: 0.25;
+    left: 50%;
+    transform: translateX(-50%) rotateX(-90deg);
+    transform-origin: top center;
+    transition: all 0.3s 250ms ease-in;
+    font-size: 1.3rem;
+
+
+}
+
+._submenu-item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+._submenu-link {
+    color: var(--color-font);
+    text-decoration: none;
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 80%;
+    
+}
+
+._submenu-link:hover {
+    border: transparent;
+    width: 200px;
+    background-color: #ffffff56;
+    height: 20px;
+
+}
+
+._submenu li {
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    align-content: center;
+}
+/*------------------*/
+
+.box-dropdown {
+    margin-top: 1rem;
+    margin-bottom: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    border: solid 2.5px;
+    width: 205px;
+    height: 22px;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    flex-wrap: nowrap;
+    border-color: #c5a9f8;
+    background-color: #fbeeff;
+    align-items: center;
+    display: flex;
+    color: var(--color-font);
+    font-size: 1.2rem;
+
+}
+
+.box-dropdown:hover {
+    border-color: #8552a0;
+    box-shadow: 0 0 0 0.05rem #26344a;
+    outline: none;
+    transform: scale(1.1);
+    transition: 0.2s;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    align-content: center;
+
+}
+
+.box-dropdown:focus {
+    border-color: #8552a0;
+    box-shadow: 0 0 0 0.05rem #26344a;
+    outline: none;
+    transform: scale(1.1);
+    transition: 0.2s;
+
+}
+
+#ad {
+    display: flex;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: gray;
+    width: 600px;
+    height: 80px;
+    visibility: hidden;
+    
+}
+
+@media (max-width:1250px) {
+    .conversor {
+        width: 90%;    
+        margin-left: auto;
+        margin-right: auto ;
+    }
+}
