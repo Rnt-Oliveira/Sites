@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="IMG/resumeIcon.png" type="image/png">
+    <title>Renato Oliveira</title>
+
+    <!--     CDN LINK       -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <!--JSPDF-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+    <!--HTML2PDF-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!--    Reset Settings  -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!--    GoogleFonts     -->
+    <!--    'Montserrat'    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Montserrat&family=Roboto&family=Sacramento&display=swap"
+        rel="stylesheet">
+    <!--     CSS     -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/style-resume.css">
+
+</head>
+
+<body>
+    <header>
+        <!--    BOTÃO MODO NOTURNO     -->
+        <div id="toggle-btn" class="fas fa-sun"></div>
+        <!------------------------------->
+        <!---------TÍTULO DA PÁGINA------------>
+        <div class="title">
+            <h1>Currículo</h1>
+            <h2>Renato Oliveira</h2>
+        </div>
+        <!------------------------------->
+        <div id="navBarMenu">
+            <nav><!-- BOTÃO DA NAVBAR -->
+                <!---->
+                <div class="mobile-menu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+                <!---->
+                <ul class="nav-list">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="resume.html">Currículo</a></li>
+                    <li><a href="project.html">Projetos</a></li>
+                    <li><a href="contact.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!------------------------------->
+
+    </header>
+    <main id="curriculo">
+        <fieldset id="historico"><!--  FORMAÇÃO E EXPERIÊNCIA  -->
+            <!---->
+
+            <div id="pt1"><!--   FORMAÇÃO   -->
+                <h1>Formação Acadêmica</h1>
+                <ul id="formacao"></ul>
+            </div>
+            <hr style="width:50%;">
+            <!---->
+
+            <div id="pt2"><!--   EXPERIÊNCIA  -->
+                <h1>Caminho Profissional</h1>
+                <ul id="experiencia"></ul>
+            </div>
+            <hr style="width:50%;">
+            <!---->
+
+            <div id="certificados"><!-- CERTIFICADOS  -->
+                <h1>Certificados</h1>
+                <ul id="cursos"></ul>
+            </div>
+
+        </fieldset>
+
+        <button onclick="gerarPDF()" id="PDF">Gerar PDF</button>
+
+        <div id="PDF0">
+            <div id="apresentacao"> <!--  APRESENTAÇÃO CURRÍCULO   -->
+                <h1>Currículo</h1>
+                <h2>Renato Alves de Oliveira</h2>
+                <p>Sou desenvolvedor e administrador em formação e gostaria de contribuir para a sua empresa ou projeto.</p>
+    
+            </div>
+            <hr style="width:50%; margin-top: 5vh; margin-bottom: 5vh;">
+            <!---->
+    
+            <div><!--   FORMAÇÃO   -->
+                <h1>Formação Acadêmica</h1>
+                <ul id="PDF1"></ul>
+            </div>
+            <hr style="width:50%; margin-top: 5vh; margin-bottom: 5vh;">
+            <!---->
+    
+            <div><!--   EXPERIÊNCIA  -->
+                <h1>Caminho Profissional</h1>
+                <ul id="PDF2"></ul>
+            </div>
+            <!---->
+            <hr style="width:50%; margin-top: 20vh; margin-bottom: 20vh;" >
+            <!---->
+    
+            <div id="certificados" id="certificadosPDF"><!-- CERTIFICADOS  -->
+                <h1>Certificados</h1>
+                <ul id="PDF3"></ul>
+            </div>
+            <!---->
+    
+            <!-- QR CODE -->
+                <img src="img/QRSITE.jpg" alt="qrcode" id="QRCODE">
+            
+            <!---->
+    
+            <style>
+                #QRCODE {
+                    width: 100px;
+                    height: 100px;
+                    display: flex;
+                    position: relative;
+                    margin-left: auto;
+                    margin-right: 7vh;
+                    margin-top: 2vh;
+
+                }
+    
+                #apresentacao h2 {
+                    font-weight: bold;
+                    font-size: 1.3rem;
+                    text-align: center;
+                    margin-top: 3vh;
+
+
+                }
+
+                #apresentacao p {
+                    text-align: center;
+                    margin-bottom: 5vh;
+                }
+    
+                div h1 {
+                    text-transform: uppercase;
+                    text-align: center;
+    
+                }
+    
+                #PDF0 {
+                    width: auto;
+                    height: 70%;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-direction: column;
+                    text-align: center;
+                    margin-top: 5vh;
+    
+                }
+    
+                #PDF3 a {
+                    justify-content: space-between;
+                    align-items: center;
+                    text-align: center;
+    
+                }
+    
+                #PDF0 div {
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 100%;
+                    align-items: center;
+                    text-align: center;
+                    display: inline-flex;
+                    flex-direction: column;
+                }
+    
+                #PDF1 li {
+                    margin-bottom: 2vh;
+                }
+    
+                #PDF1 li p {
+                    font-size: 0.9rem;
+                }
+    
+                #PDF1 li p:first-child {
+                    font-weight: 600;
+                    font-size: 1.1rem;
+    
+                }
+    
+                #PDF2 li {
+                    margin-bottom: 2vh;
+    
+                }
+    
+                #PDF2 li p {
+                    font-size: 0.9rem;
+                }
+    
+                #PDF2 li p:first-child {
+                    font-weight: 600;
+                    font-size: 1.1rem;
+                }
+    
+                #certificadosPDF {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    top: 5vh;
+                    text-align: center;
+                    margin-left: auto;
+                    list-style: none;
+                    margin-right: auto;
+    
+                }
+    
+                #certificadosPDF li {
+                    margin-bottom: 2vh;
+    
+    
+                }
+    
+                #certificadosPDF li p {
+                    font-size: 0.9rem;
+                    font-weight: bold;
+                }
+    
+                #PDF3 p:nth-child(2),
+                #PDF3 p:first-child {
+                    font-weight: bold;
+                    text-transform: uppercase;
+    
+                }
+    
+                #PDF3 p {
+                    margin: 0.25rem;
+                }
+    
+                #certificadosPDF li a {
+                    font-weight: bold;
+                    font-size: 1rem;
+                }
+    
+                #PDF3 {
+                    /*  UL    */
+                    display: flex;
+                    flex-flow: row wrap;
+                    vertical-align: middle;
+                    align-items: center;
+                    width: auto;
+                    margin: auto;
+                    padding: auto;
+    
+                }
+    
+                #PDF3 li {
+                    text-align: center;
+                    /* margin-left: 1vh; */
+                    display: inline-flex;
+                    align-items: center;
+                    /* height: 10vh; */
+                    box-shadow: 3px 3px 6px -6px rgb(0 0 0);
+                    flex-wrap: wrap;
+                    align-content: center;
+                    justify-content: center;
+                    width: 50%;
+                    height: 13vh;
+                    padding-bottom: 1rem;
+    
+                }
+    
+                #PDF3 img {
+                    width: 120px;
+                    height: 90px;
+                    float: left;
+                    border-radius: 9px;
+                }
+    
+                #PDF3 div:nth-child(1) {
+                    display: flex;
+                    align-items: center;
+                    width: 50%;
+                    flex-direction: column;
+                    vertical-align: middle;
+                    justify-content: center;
+                }
+    
+                #PDF3 div:nth-child(2) {
+                    width: 70%;
+                    margin-left: auto;
+                    justify-content: center;
+                    display: flex;
+                    flex-direction: column;
+                }
+    
+                #PDF0 h1 {
+                    margin-top: 5vh;
+                    margin-bottom: 5vh;
+                }
+    
+                #certificadosPDF p:nth-child(2) {
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: 1rem;
+    
+    
+                }
+    
+                #PDF0,
+                #PDF1,
+                #PDF2,
+                #PDF3,
+                h1 {
+                    text-align: center;
+                    list-style: none;
+                    text-align: center;
+                    list-style: none;
+                    align-items: center;
+                    justify-content: center;
+                }
+    
+                #PDF3 a p {
+                    margin: 0;
+                    padding: 0;
+                }
+            </style>
+        <script src="script/resume.js"></script>
+        <script src="script/printPDF.js"></script>
+    </main>
+
+    <footer>
+        <div id="footerConteiner">
+            <a href="https://www.oliveirarenato.com.br/" target="_blank"><img src="img/LogoBlack.png"
+                    class="footerImage" alt="Logo Criador"></a>
+        </div>
+    </footer>
+
+    <!--    JAVASCRIPT  -->
+    <script src="script/mobile-navbar.js"></script>
+    <script src="script/darkmode.js"></script>
+
+</body>
+
+</html>
