@@ -15,3 +15,4 @@
 <h1> Futuros uploads </h1>
 <p><span>Irei automatizar a inclusão de certificados e aprimorar a versão de pdf que é impressa<span></p>
 
+  <h1>ESTA VERSÃO FOI FINALIZADA, ATUALIZAÇÕES SOMENTE NA VERSÃO 2</h1>
